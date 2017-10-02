@@ -1,4 +1,4 @@
-package template
+package datacentred
 
 import (
 	"github.com/hashicorp/terraform/helper/schema"
