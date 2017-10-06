@@ -94,7 +94,9 @@ func resourceUserUpdate(d *schema.ResourceData, meta interface{}) error {
 	}
 
 	if d.HasChange("password") {
-		user.ChangePassword(d.Get("password").(string))
+		if len(d.Get("password").(string)) > 0 {
+			user.ChangePassword(d.Get("password").(string))
+		}
 	}
 
 	if hasChange {

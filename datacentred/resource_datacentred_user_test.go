@@ -108,6 +108,7 @@ func testAccDatacentredUser_update(email string) string {
       email = "%s"
       first_name = "Changed"
       last_name = "Changed"
+      password = "Changed123!"
     }
   `, email)
 }
